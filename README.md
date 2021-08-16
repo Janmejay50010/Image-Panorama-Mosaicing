@@ -1,19 +1,30 @@
-[![Generic badge](https://img.shields.io/badge/CV-Assignment:2-BLUE.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/DUE-23:59hrs,21/02/2021-RED.svg)](https://shields.io/)
-# Assignment-2
-The goal of this assignment is to familiarize you with Image mosaicing and Stereo correspondence problem.
+# Creating Image panorama
 
-Please raise doubts on the appropriate assignment thread on moodle.
+## Introduction
+Image Mosaicing or photo stitching is the process of combining multiple photographic images with overlapping fields of view to produce a single high-resolution image. 
 
-# Instructions
-- Follow the directory structure as shown below: 
-  ```
-  ├── src           
-        ├── Assignment2.ipynb
-  ├── images            //your images
-  └── README.md
-  ```
-- `src` will contain the Jupyter notebook(s) used for the assignment.
-- `images` will contain images used for the questions.
-- Follow this directory structure for all following assignments in this course.
-- **Make sure you run your Jupyter notebook before committing, to save all outputs.**
+## Screenshots
+### Image1
+![image](1_1.jpg)  
+### Image2
+![image](1_2.jpg)
+### Image3
+![image](1_3.jpg)
+### Combined_Image (Single Panorama)
+![image](combined_image.png)
+
+
+## Working
+First the algorithm computes the keypoints and there descriptors for each pair of images using the SIFT algorithm. The descriptors of the two images are then compared for closeness according to algorithm of choice. The keypoints of the matched descriptors are then used to calculate a projection matrix using RANSAC algorithm for projecting keypoints from image1 to image2. This projection matrix is then used to stitch the two images together by projecting one image into another image's frame of reference.
+
+## Prerequisites
+* Python Packages :-
+    *  opencv-contrib-python, version = 4.4.0.44
+    * numpy
+    * matplotlib
+    * cv2
+    * random
+    * math
+
+## Notebook link
+https://colab.research.google.com/drive/1GDjI_ic5OlB-GbmdO9VI-fH6VF7xeRMJ#scrollTo=wgvI2hehjj0d
