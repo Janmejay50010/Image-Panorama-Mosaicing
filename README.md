@@ -5,13 +5,13 @@ Image Mosaicing or photo stitching is the process of combining multiple photogra
 
 ## Screenshots
 ### Image1
-![image](1_1.jpg)  
+![image](./images/1_1.jpg)  
 ### Image2
-![image](1_2.jpg)
+![image](./images/1_2.jpg)
 ### Image3
-![image](1_3.jpg)
+![image](./images/1_3.jpg)
 ### Combined_Image (Single Panorama)
-![image](combined_image.png)
+![image](./images/combined_image.png)
 
 
 ## Working
